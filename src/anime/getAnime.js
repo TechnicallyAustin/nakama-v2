@@ -1,0 +1,1 @@
+// contains fetch request to aqcuire animes
