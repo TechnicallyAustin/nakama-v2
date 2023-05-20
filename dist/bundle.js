@@ -702,6 +702,50 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/content/createContent.js":
+/*!**************************************!*\
+  !*** ./src/content/createContent.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createContent: () => (/* binding */ createContent)\n/* harmony export */ });\n/* harmony import */ var _footerContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footerContent */ \"./src/content/footerContent.js\");\n/* harmony import */ var _headerContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./headerContent */ \"./src/content/headerContent.js\");\n/* harmony import */ var _mainContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainContent */ \"./src/content/mainContent.js\");\n\n\n\nfunction createContent() {\n  (0,_headerContent__WEBPACK_IMPORTED_MODULE_1__.headerContent)();\n  (0,_mainContent__WEBPACK_IMPORTED_MODULE_2__.mainContent)();\n  (0,_footerContent__WEBPACK_IMPORTED_MODULE_0__.footerContent)();\n}\n\n//# sourceURL=webpack://nakama-v2/./src/content/createContent.js?");
+
+/***/ }),
+
+/***/ "./src/content/footerContent.js":
+/*!**************************************!*\
+  !*** ./src/content/footerContent.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   footerContent: () => (/* binding */ footerContent)\n/* harmony export */ });\nfunction footerContent() {\n  console.log(\"This creates footer content\");\n}\n\n//# sourceURL=webpack://nakama-v2/./src/content/footerContent.js?");
+
+/***/ }),
+
+/***/ "./src/content/headerContent.js":
+/*!**************************************!*\
+  !*** ./src/content/headerContent.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   headerContent: () => (/* binding */ headerContent)\n/* harmony export */ });\nfunction headerContent() {\n  const header = document.querySelector('.page-header');\n  const logoContainer = header.appendChild(document.createElement('div'));\n  logoContainer.setAttribute(\"class\", \"logo-container text-white\");\n  const menuContainer = header.appendChild(document.createElement('div'));\n  menuContainer.setAttribute(\"class\", \"menu-container text-white\");\n  const elements = {\n    title: function () {\n      const title = logoContainer.appendChild(document.createElement('p'));\n      title.setAttribute(\"class\", \"nakama-title\");\n      title.textContent = \"Nakama\";\n    },\n    logo: function () {\n      const logo = logoContainer.appendChild(document.createElement('img'));\n      logo.setAttribute(\"class\", \"nakama-logo\");\n      logo.setAttribute(\"src\", \"\");\n      logo.setAttribute(\"alt\", \"\");\n    },\n    menu: function () {\n      const menu = menuContainer.appendChild(document.createElement('ul'));\n      menu.setAttribute(\"class\", \"menu\");\n      const menuItems = [\"Menu 1\", \"Menu 2\", \"Menu 3\"];\n      menuItems.forEach(item => {\n        const menuItem = menu.appendChild(document.createElement('li'));\n        menuItem.textContent = item;\n      });\n    }\n  };\n  elements.title();\n  elements.logo();\n  elements.menu();\n}\n\n//# sourceURL=webpack://nakama-v2/./src/content/headerContent.js?");
+
+/***/ }),
+
+/***/ "./src/content/mainContent.js":
+/*!************************************!*\
+  !*** ./src/content/mainContent.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   mainContent: () => (/* binding */ mainContent)\n/* harmony export */ });\nfunction mainContent() {\n  console.log(\"this creates mainContent\");\n}\n\n//# sourceURL=webpack://nakama-v2/./src/content/mainContent.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -709,7 +753,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_css_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _anime_getAnime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./anime/getAnime */ \"./src/anime/getAnime.js\");\n/* harmony import */ var _anime_getSeasonalAnime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./anime/getSeasonalAnime */ \"./src/anime/getSeasonalAnime.js\");\n/* harmony import */ var _anime_getTrendingAnime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./anime/getTrendingAnime */ \"./src/anime/getTrendingAnime.js\");\n/* harmony import */ var _page_createPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./page/createPage */ \"./src/page/createPage.js\");\n\n\n\n\n\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_page_createPage__WEBPACK_IMPORTED_MODULE_6__.createPage)();\n  //getAnimes()\n  //getSeasonalAnime()\n  (0,_anime_getTrendingAnime__WEBPACK_IMPORTED_MODULE_5__.getTrendingAnime)();\n});\n\n//# sourceURL=webpack://nakama-v2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_css_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _anime_getAnime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./anime/getAnime */ \"./src/anime/getAnime.js\");\n/* harmony import */ var _anime_getSeasonalAnime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./anime/getSeasonalAnime */ \"./src/anime/getSeasonalAnime.js\");\n/* harmony import */ var _anime_getTrendingAnime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./anime/getTrendingAnime */ \"./src/anime/getTrendingAnime.js\");\n/* harmony import */ var _page_createPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./page/createPage */ \"./src/page/createPage.js\");\n/* harmony import */ var _content_createContent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./content/createContent */ \"./src/content/createContent.js\");\n\n\n\n\n\n\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_page_createPage__WEBPACK_IMPORTED_MODULE_6__.createPage)();\n  (0,_content_createContent__WEBPACK_IMPORTED_MODULE_7__.createContent)();\n  //getAnimes()\n  //getSeasonalAnime()\n  (0,_anime_getTrendingAnime__WEBPACK_IMPORTED_MODULE_5__.getTrendingAnime)();\n});\n\n//# sourceURL=webpack://nakama-v2/./src/index.js?");
 
 /***/ }),
 
@@ -742,7 +786,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".page-content {\\n  width: 100%;\\n  height: 100vh;\\n  display: grid;\\n  grid-template-rows: 1fr 16fr 1fr;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://nakama-v2/./src/css/styles.css?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".page-content {\\n  width: 100%;\\n  height: 100vh;\\n  display: grid;\\n  grid-template-rows: 1fr 16fr 1fr;\\n}\\n\\n.page-header {\\n  display: grid;\\n  grid-template-areas: \\\"logo-container break menu menu menu menu\\\";\\n}\\n\\n.logo-container {\\n  grid-area: logo-container;\\n}\\n\\n.menu-container {\\n  grid-area: menu-container;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://nakama-v2/./src/css/styles.css?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
