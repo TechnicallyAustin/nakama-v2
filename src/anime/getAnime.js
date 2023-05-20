@@ -10,12 +10,23 @@ export async function getAnimes(){
             'Content-Type': 'application/json'
         }
     }
-
     try {
         const response = await fetch(`${url}/anime`, {mode: 'cors'});
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
+        const anime = await response.json();
+            for (let i = 0; i < anime.data.length; i++) {
+                console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
+                let title = anime.data[i].attributes.canonicalTitle
+                let image = anime.data[i].attributes.coverImage
+                let info = anime.data[i].attributes.description
+                let rating = anime.data[i].attributes.averageRating
+                let episodes = anime.data[i].attributes.episodeCount
+                let status = anime.data[i].attributes.status
+                let synopsis = anime.data[i].attributes.synopsis
+                let users =anime.data[i].attributes.userCount
+                console.log(title,image,info,rating,episodes,status,synopsis,users);
+
+            }}
+    catch (error) {
         console.log(error);
     }
 
