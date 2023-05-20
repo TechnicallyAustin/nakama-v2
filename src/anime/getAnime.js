@@ -2,7 +2,6 @@
 export async function getAnimes(){
     //const url = "https://kitsu.io/api/edge";
     const url = process.env.URL
-    console.log(url);
     const apiKey = process.env.API_KEY;
     const options= {
         mode: 'cors',
@@ -14,6 +13,7 @@ export async function getAnimes(){
     try {
         const response = await fetch(`${url}/anime`, {mode: 'cors'});
         const anime = await response.json();
+        // build anime object
             for (let i = 0; i < anime.data.length; i++) {
                 console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
                 let title = anime.data[i].attributes.canonicalTitle
