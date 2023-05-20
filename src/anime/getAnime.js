@@ -12,7 +12,7 @@ export async function getAnimes(){
     }
 
     try {
-        const response = await fetch(`${url}/anime`, options);
+        const response = await fetch(`${url}/anime`, {mode: 'cors'});
         const data = await response.json();
         console.log(data);
     } catch (error) {
