@@ -21,13 +21,16 @@ html{
 
 .hero{
     width: 100%;
-    height: 40%;
-    background-image: url(../assets/anime-2.jpg);
+    min-width: 45%;
+    max-width: 100%;
+    height: 40vh;
+    background-image: url(../assets/anime-6.jpg);
     background-size: cover;
-    background-position:center;
+    background-position: center;
 }
 
 .anime-container{
     width: 100%;
     height: 60%;
+    display: relative;
 }
