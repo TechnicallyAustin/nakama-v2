@@ -3,7 +3,7 @@ export function headerContent(){
     const elements = {
         title: function(){
             const title = header.appendChild(document.createElement('p'));
-            title.setAttribute("class", "nakama-title mb-0 ms-3 text-white")
+            title.setAttribute("class", "nakama-title mb-0 ms-3 text-white fs-3")
             title.textContent = "Nakama"
         },
         menu: function(){
@@ -16,7 +16,6 @@ export function headerContent(){
                 menuItem.setAttribute("class", "menu-item text-white")
                 menuItem.textContent = item
             })
-
         }
     }
     elements.title()
