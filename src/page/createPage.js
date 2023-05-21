@@ -3,7 +3,7 @@ export function createPage(){
     const page = {
         header: function(){
             const header = pageContent.appendChild(document.createElement('header'));
-            header.setAttribute('class', 'page-header w-100 h-100 bg-dark');
+            header.setAttribute('class', 'page-header w-100 h-100 bg-dark d-flex justify-content-between align-items-center');
         },
         main: function(){
             const main = pageContent.appendChild(document.createElement('main'));

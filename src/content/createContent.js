@@ -4,6 +4,7 @@ import { mainContent } from "./mainContent";
 
 export function createContent(){
     headerContent()
+
     mainContent()
     footerContent()
 }
