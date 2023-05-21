@@ -21,6 +21,9 @@ html{
 
 .hero{
     width: 100%;
-    height: 35%;
+    height: 40%;
+    background-image: url(../assets/anime-2.jpg);
+    background-size: cover;
+    background-position:center;
 }
 

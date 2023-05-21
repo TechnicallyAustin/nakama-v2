@@ -3,15 +3,15 @@ export function createPage(){
     const page = {
         header: function(){
             const header = pageContent.appendChild(document.createElement('header'));
-            header.setAttribute('class', 'page-header w-100 h-100 bg-dark d-flex justify-content-between align-items-center');
+            header.setAttribute('class', 'page-header w-100 h-100 bg-black d-flex justify-content-between align-items-center');
         },
         main: function(){
             const main = pageContent.appendChild(document.createElement('main'));
-            main.setAttribute('class', 'page-main w-100 h-100 bg-info');
+            main.setAttribute('class', 'page-main w-100 h-100 bg-dark');
         },
         footer: function(){
             const footer = pageContent.appendChild(document.createElement('footer'));
-            footer.setAttribute('class', 'page-footer w-100 h-100 bg-dark');
+            footer.setAttribute('class', 'page-footer w-100 h-100 bg-black');
         }
     };
     page.header();

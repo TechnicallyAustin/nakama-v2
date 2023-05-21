@@ -10,7 +10,7 @@ export function headerContent(){
             const menu = header.appendChild(document.createElement('ul'));
             menu.setAttribute("class", "menu list-unstyled d-flex justify-content-around align-items-center w-50 h-100 mb-0")
             
-            const menuItems = ["Menu 1", "Menu 2", "Menu 3"]
+            const menuItems = ["Anime", "Manga", "Discover", "Search"]
             menuItems.forEach(item => {
                 const menuItem = menu.appendChild(document.createElement('li'));
                 menuItem.setAttribute("class", "menu-item text-white")
