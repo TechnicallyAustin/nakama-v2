@@ -8,7 +8,7 @@ export function mainContent(){
         },
         animeContainer: function (){
             const animeContainer = main.appendChild(document.createElement("div"))
-            animeContainer.setAttribute("class", "anime-container bg-light")
+            animeContainer.setAttribute("class", "anime-container bg-black")
         }
     }
     element.hero()

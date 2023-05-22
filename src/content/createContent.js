@@ -1,3 +1,4 @@
+import { animeContent } from "./animeContent";
 import { footerContent } from "./footerContent";
 import { headerContent } from "./headerContent";
 import { heroContent } from "./heroContent";
@@ -7,5 +8,6 @@ export function createContent(){
     headerContent()
     mainContent()
     heroContent()
+    animeContent()
     footerContent()
 }
