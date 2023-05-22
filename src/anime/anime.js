@@ -9,6 +9,7 @@ class Anime {
         this.status = status;
         this.synopsis = synopsis;
         this.users = users;
+        Anime.all.push(this);
     }
 
     static find(name) {

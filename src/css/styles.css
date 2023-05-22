@@ -42,7 +42,7 @@ html{
 
 .headline-container{
     position: absolute;
-    top: 8%;
+    top: 6%;
     left: 2%;
 }
 
@@ -51,7 +51,7 @@ html{
 }
 
 .display-container{
-    height: 20vh;
+    height: 21vh;
 }
 
 .anime-list{

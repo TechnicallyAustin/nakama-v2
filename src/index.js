@@ -11,7 +11,7 @@ import { createContent } from "./content/createContent";
 document.addEventListener("DOMContentLoaded", () => {
     createPage()
     createContent()
-    //getAnimes()
+    getAnimes()
     //getSeasonalAnime()
-    getTrendingAnime()
+    //getTrendingAnime()
 });

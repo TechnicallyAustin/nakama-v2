@@ -15,19 +15,24 @@ export async function getAnimes(){
         const anime = await response.json();
         // build anime object
             for (let i = 0; i < anime.data.length; i++) {
-                console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
-                let title = anime.data[i].attributes.canonicalTitle
-                let image = anime.data[i].attributes.coverImage.small
-                let info = anime.data[i].attributes.description
-                let rating = anime.data[i].attributes.averageRating
-                let episodes = anime.data[i].attributes.episodeCount
-                let status = anime.data[i].attributes.status
-                let synopsis = anime.data[i].attributes.synopsis
-                let users =anime.data[i].attributes.userCount
-                console.log(title,image,info,rating,episodes,status,synopsis,users);
-            }}
+                //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
+                let loadAnime = {
+                    title: anime.data[i].attributes.canonicalTitle,
+                    image: anime.data[i].attributes.coverImage,
+                    info: anime.data[i].attributes.description,
+                    rating: anime.data[i].attributes.averageRating,
+                    episodes: anime.data[i].attributes.episodeCount,
+                    status: anime.data[i].attributes.status,
+                    synopsis: anime.data[i].attributes.synopsis,
+                    users: anime.data[i].attributes.userCount
+                }
+                console.log(loadAnime);
+                // create anime objects
+                // when objects are created, they are added to static all in the anime class
+                
+            }
+    }   
     catch (error) {
         console.log(error);
     }
-
 }

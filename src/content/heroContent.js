@@ -15,7 +15,7 @@ export function heroContent(){
         search: function(){
             const input = searchContainer.appendChild(document.createElement('input'));
             input.setAttribute('type', 'text');
-            input.setAttribute('class','search-input form-control w-100 rounded py-2 bg-opacaity-50 fs-2 border-3 border-black');
+            input.setAttribute('class','search-input form-control w-100 rounded bg-opacaity-50 fs-2 border-3 border-black');
             input.setAttribute('placeholder', 'One Piece');
         },
         buttons: function(){
