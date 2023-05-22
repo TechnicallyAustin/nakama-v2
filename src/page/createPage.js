@@ -3,7 +3,7 @@ export function createPage(){
     const page = {
         header: function(){
             const header = pageContent.appendChild(document.createElement('header'));
-            header.setAttribute('class', 'page-header w-100 h-100 bg-black d-flex justify-content-between align-items-center');
+            header.setAttribute('class', 'page-header w-100 h-100 bg-black d-flex justify-content-between align-items-center border-bottom border-3 border-white'); 
         },
         main: function(){
             const main = pageContent.appendChild(document.createElement('main'));
@@ -11,7 +11,7 @@ export function createPage(){
         },
         footer: function(){
             const footer = pageContent.appendChild(document.createElement('footer'));
-            footer.setAttribute('class', 'page-footer w-100 h-100 bg-black');
+            footer.setAttribute('class', 'page-footer w-100 h-100 bg-warning');
         }
     };
     page.header();
