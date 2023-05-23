@@ -29,6 +29,7 @@ export async function getAnimes(){
                     users: anime.data[i].attributes.userCount
                 }
                 let newAnime = new Anime(loadAnime.title, loadAnime.image, loadAnime.info, loadAnime.rating, loadAnime.episodes, loadAnime.status, loadAnime.synopsis, loadAnime.users);
+                console.log(loadAnime.image.small)
             };
     }   
     catch (error) {

@@ -12,7 +12,7 @@ export function animeContent(){
         label.textContent = title;
 
         let list = container.appendChild(document.createElement('div'));
-        list.setAttribute('class', `${value}-anime anime-list  bg-black bg-opacity-25 rounded`);
+        list.setAttribute('class', `${value}-anime anime-list  bg-black bg-opacity-25 rounded d-flex justify-content-start align-items-center mx-3`);
         
     }
 }

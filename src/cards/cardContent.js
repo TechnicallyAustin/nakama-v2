@@ -1,6 +1,6 @@
 import { allAnime } from "../anime/anime";
 import { getAnimes } from "../anime/getAnime";
-import { Card, build, domBuilder } from "./card";
+import { animeCard, domBuilder } from "./createCard";
 
 export async function cardContent(){
     const seasonal = document.querySelector('.seasonal-anime')
@@ -10,7 +10,8 @@ export async function cardContent(){
     await getAnimes()
     console.log("all Anime", allAnime, allAnime.length)
     allAnime.forEach(anime => {
-        let newCard = domBuilder.build(anime)
+        //let newCard = domBuilder.build(anime)
+        let newCard = animeCard.build(anime)
         console.log(newCard)
         seasonal.appendChild(newCard)
     })
