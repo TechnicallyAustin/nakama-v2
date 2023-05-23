@@ -20,6 +20,8 @@ export async function getAnimes(){
         //const animeList = [];
             for (let i = 0; i < anime.data.length; i++) {
                 //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
+                console.log(anime.data[i].attributes.coverImage)
+                console.log(anime.data[i])
                 let loadAnime = {
                     title: anime.data[i].attributes.canonicalTitle,
                     image: anime.data[i].attributes.coverImage,
