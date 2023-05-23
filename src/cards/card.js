@@ -1,5 +1,5 @@
 export class Card {
-    static all = [];
+
     constructor(title, image, info, rating, episodes, status, synopsis, users) {
         this.title = title;
         this.image = image;
@@ -9,12 +9,31 @@ export class Card {
         this.status = status;
         this.synopsis = synopsis;
         this.users = users;
-    
-        this.all.push(this);
+        allCards.push(this);
+
     }
 }
 
-//export function domBuilder(animeObject){
+const allCards = []
+
+const domCard = () => {
+    const card = () => null;
+    const createCard = () => {}
+    const cardTitle = (title) => {}
+    const cardImage = (image) => {}
+    const cardInfo = (info) => {}
+    const cardRating = (rating) => {}
+    const cardEpisodes = (episodes) => {}
+    const cardStatus = (status) => {}
+    const cardSynopsis = (synopsis) => {}
+    const cardUsers = (users) => {}
+    const builder = () => {
+        return {card, createCard, cardTitle, cardImage, cardInfo, cardRating, cardEpisodes, cardStatus, cardSynopsis, cardUsers}
+    }
+    //return {card, cardTitle, cardImage, cardInfo, cardRating, cardEpisodes, cardStatus, cardSynopsis, cardUsers, builder}
+    return {builder}
+}
+
     export const domBuilder = {
         card: null,
         createCard: function(){
@@ -64,17 +83,17 @@ export class Card {
             usersElement.setAttribute('class', ``);
             usersElement.textContent = users;
         },
-        build: function(title, image, info, rating, episodes, status, synopsis, users){
+        build: function(object){
             this.createCard();
-            this.title(title);
-            this.image(image);
-            this.info(info);
-            this.rating(rating);
-            this.episodes(episodes);
-            this.status(status);
-            this.synopsis(synopsis);
-            this.users(users);
+            console.log(title)
+            this.title(object.title);
+            this.image(object.image);
+            this.info(object.info);
+            this.rating(object.rating);
+            this.episodes(object.episodes);
+            this.status(object.status);
+            this.synopsis(object.synopsis);
+            this.users(object.users);
             return this.card;
         }
     }
-//}
