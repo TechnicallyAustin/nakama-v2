@@ -1,5 +1,4 @@
 export function mainContent(){
-    console.log("this creates mainContent")
     const main = document.querySelector("main")
     const element = {
         hero: function (){
@@ -8,7 +7,7 @@ export function mainContent(){
         },
         animeContainer: function (){
             const animeContainer = main.appendChild(document.createElement("div"))
-            animeContainer.setAttribute("class", "anime-container bg-black")
+            animeContainer.setAttribute("class", "anime-container bg-light")
         }
     }
     element.hero()

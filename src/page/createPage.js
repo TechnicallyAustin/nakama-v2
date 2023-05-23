@@ -7,7 +7,7 @@ export function createPage(){
         },
         main: function(){
             const main = pageContent.appendChild(document.createElement('main'));
-            main.setAttribute('class', 'page-main w-100 h-100 bg-black');
+            main.setAttribute('class', 'page-main w-100 h-100 bg-light');
         },
         footer: function(){
             const footer = pageContent.appendChild(document.createElement('footer'));

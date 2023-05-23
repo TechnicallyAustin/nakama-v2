@@ -1,5 +1,5 @@
 export class Anime {
-    static all = [];
+
     constructor(title, image, info, rating, episodes, status, synopsis, users) {
         this.title = title;
         this.image = image;
@@ -9,7 +9,7 @@ export class Anime {
         this.status = status;
         this.synopsis = synopsis;
         this.users = users;
-        Anime.all.push(this);
+        allAnime.push(this);
     }
 
     static find(name) {
@@ -18,7 +18,6 @@ export class Anime {
     static findById(id) {
         return Anime.all.find(anime => anime.id === id);
     }
-    static all() {
-        return Anime.all;
-    }
 }
+
+export const allAnime = []

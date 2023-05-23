@@ -6,52 +6,62 @@ html{
 
 .page-content{
     width: 100%;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100vh;;
+    max-height: 100vh;;
     display: grid;
     grid-template-rows: 1fr 16fr 1fr;
 }
 
+.page-header{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
 
 .main-content{
+    height: auto;
     width: 100%;
     display: grid;
     grid-template-rows: 2fr 4fr;
+
 }
 
 .hero{
     width: 100%;
     min-width: 45%;
     max-width: 100%;
-    height: 25vh;
-    background-image: url(../assets/anime-6.jpg);
+    height: 45vh;
+    background-image: url(../assets/anime-7.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .anime-container{
     width: 100%;
-    height: 70%;
+    height: 80%;
+    overflow-y: scroll;
 }
 
 .search-container{
     position: absolute;
-    top: 8%;
+    top: 20%;
     left: 2%;
 }
 
 .headline-container{
     position: absolute;
-    top: 6%;
+    top: 10%;
     left: 2%;
 }
 
 .search-input{
     background-color: rgba(255,255,255,0.5);
+
 }
 
 .display-container{
-    height: 21vh;
+    height: 45vh;
 }
 
 .anime-list{

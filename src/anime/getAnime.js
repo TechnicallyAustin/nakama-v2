@@ -20,8 +20,8 @@ export async function getAnimes(){
         //const animeList = [];
             for (let i = 0; i < anime.data.length; i++) {
                 //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
-                console.log(anime.data[i].attributes.coverImage)
-                console.log(anime.data[i])
+                //console.log(anime.data[i].attributes.coverImage)
+                //console.log(anime.data[i])
                 let loadAnime = {
                     title: anime.data[i].attributes.canonicalTitle,
                     image: anime.data[i].attributes.coverImage,
@@ -37,7 +37,6 @@ export async function getAnimes(){
                 // create anime objects
                 // when objects are created, they are added to static all in the anime class
             }
-            console.log(Anime.all);
     }   
     catch (error) {
         console.log(error);
