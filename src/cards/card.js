@@ -16,70 +16,6 @@ export class Card {
 
 const allCards = []
 
-export const domCard = (animeObject) => {
-    const card = () => null;
-    const createCard = () => {
-        const newCard = document.createElement('div');
-        card.setAttribute('class', `anime-card`);
-        this.card = newCard;
-    }
-    const cardTitle = (title) => {
-        const titleElement = this.card.appendChild(document.createElement('h2'));
-        titleElement.setAttribute('class', ``);
-        titleElement.textContent = title;
-    }
-    const cardImage = (image) => {
-        const imageElement = this.card.appendChild(document.createElement('img'));
-        imageElement.setAttribute('class', ``);
-        imageElement.setAttribute('src', image);
-        imageElement.setAttribute('alt', ``);
-    }
-    const cardInfo = (info) => {
-        const infoElement = this.card.appendChild(document.createElement('p'));
-        infoElement.setAttribute('class', ``);
-        infoElement.textContent = info;
-    }
-    const cardRating = (rating) => {
-        const ratingElement = this.card.appendChild(document.createElement('p'));
-        ratingElement.setAttribute('class', ``);
-        ratingElement.textContent = rating;
-    }
-    const cardEpisodes = (episodes) => {
-        const episodesElement = this.card.appendChild(document.createElement('p'));
-        episodesElement.setAttribute('class', ``);
-        episodesElement.textContent = episodes;
-    }
-    const cardStatus = (status) => {
-        const statusElement = this.card.appendChild(document.createElement('p'));
-        statusElement.setAttribute('class', ``);
-        statusElement.textContent = status;
-    }
-    const cardSynopsis = (synopsis) => {
-        const synopsisElement = this.card.appendChild(document.createElement('p'));
-        synopsisElement.setAttribute('class', ``);
-        synopsisElement.textContent = synopsis;
-    }
-    const cardUsers = (users) => {
-        const usersElement = this.card.appendChild(document.createElement('p'));
-        usersElement.setAttribute('class', ``);
-        usersElement.textContent = users;
-    }
-    const builder = (animeObject) => {
-        createCard();
-        cardTitle(animeObject.title);
-        cardImage(animeObject.image);
-        cardInfo(animeObject.info);
-        cardRating(animeObject.rating);
-        cardEpisodes(animeObject.episodes);
-        cardStatus(animeObject.status);
-        cardSynopsis(animeObject.synopsis);
-        cardUsers(animeObject.users);
-        return {card, createCard, cardTitle, cardImage, cardInfo, cardRating, cardEpisodes, cardStatus, cardSynopsis, cardUsers}
-    }
-    //return {card, cardTitle, cardImage, cardInfo, cardRating, cardEpisodes, cardStatus, cardSynopsis, cardUsers, builder}
-    return {builder}
-}
-
     export const domBuilder = {
         card: null,
         createCard: function(){
@@ -131,7 +67,7 @@ export const domCard = (animeObject) => {
         },
         build: function(object){
             this.createCard();
-            console.log(title)
+            console.log(object.title)
             this.title(object.title);
             this.image(object.image);
             this.info(object.info);
