@@ -14,6 +14,7 @@ export function animeContent(){
 
         let list = container.appendChild(document.createElement('div'));
         list.setAttribute('class', `${value}-anime anime-list bg-light bg-opacity-25 rounded`);
+        
     }
 }
 

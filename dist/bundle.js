@@ -669,6 +669,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/anime/anime.js":
+/*!****************************!*\
+  !*** ./src/anime/anime.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Anime: () => (/* binding */ Anime)\n/* harmony export */ });\nclass Anime {\n  static all = [];\n  constructor(title, image, info, rating, episodes, status, synopsis, users) {\n    this.title = title;\n    this.image = image;\n    this.info = info;\n    this.rating = rating;\n    this.episodes = episodes;\n    this.status = status;\n    this.synopsis = synopsis;\n    this.users = users;\n    Anime.all.push(this);\n  }\n  static find(name) {\n    return Anime.all.find(anime => anime.name === name);\n  }\n  static findById(id) {\n    return Anime.all.find(anime => anime.id === id);\n  }\n  static all() {\n    return Anime.all;\n  }\n}\n\n//# sourceURL=webpack://nakama-v2/./src/anime/anime.js?");
+
+/***/ }),
+
 /***/ "./src/anime/getAnime.js":
 /*!*******************************!*\
   !*** ./src/anime/getAnime.js ***!
@@ -676,7 +687,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getAnimes: () => (/* binding */ getAnimes)\n/* harmony export */ });\n// contains fetch request to aqcuire animes\nasync function getAnimes() {\n  //const url = \"https://kitsu.io/api/edge\";\n  const url = \"https://kitsu.io/api/edge\";\n  const apiKey = \"MISSING_ENV_VAR\".API_KEY;\n  const options = {\n    mode: 'cors',\n    headers: {\n      'Accept': 'application/json',\n      'Content-Type': 'application/json'\n    }\n  };\n  try {\n    const response = await fetch(`${url}/anime`, {\n      mode: 'cors'\n    });\n    const anime = await response.json();\n    // build anime object\n    for (let i = 0; i < anime.data.length; i++) {\n      //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);\n      let loadAnime = {\n        title: anime.data[i].attributes.canonicalTitle,\n        image: anime.data[i].attributes.coverImage,\n        info: anime.data[i].attributes.description,\n        rating: anime.data[i].attributes.averageRating,\n        episodes: anime.data[i].attributes.episodeCount,\n        status: anime.data[i].attributes.status,\n        synopsis: anime.data[i].attributes.synopsis,\n        users: anime.data[i].attributes.userCount\n      };\n      console.log(loadAnime);\n      // create anime objects\n      // when objects are created, they are added to static all in the anime class\n    }\n  } catch (error) {\n    console.log(error);\n  }\n}\n\n//# sourceURL=webpack://nakama-v2/./src/anime/getAnime.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getAnimes: () => (/* binding */ getAnimes)\n/* harmony export */ });\n/* harmony import */ var _anime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./anime */ \"./src/anime/anime.js\");\n\n\n// contains fetch request to aqcuire animes\nasync function getAnimes() {\n  //const url = \"https://kitsu.io/api/edge\";\n  const url = \"https://kitsu.io/api/edge\";\n  const apiKey = \"MISSING_ENV_VAR\".API_KEY;\n  const options = {\n    mode: 'cors',\n    headers: {\n      'Accept': 'application/json',\n      'Content-Type': 'application/json'\n    }\n  };\n  try {\n    const response = await fetch(`${url}/anime`, {\n      mode: 'cors'\n    });\n    const anime = await response.json();\n    // build anime object\n    //const animeList = [];\n    for (let i = 0; i < anime.data.length; i++) {\n      //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);\n      let loadAnime = {\n        title: anime.data[i].attributes.canonicalTitle,\n        image: anime.data[i].attributes.coverImage,\n        info: anime.data[i].attributes.description,\n        rating: anime.data[i].attributes.averageRating,\n        episodes: anime.data[i].attributes.episodeCount,\n        status: anime.data[i].attributes.status,\n        synopsis: anime.data[i].attributes.synopsis,\n        users: anime.data[i].attributes.userCount\n      };\n      //animeList.push(loadAnime);\n      let newAnime = new _anime__WEBPACK_IMPORTED_MODULE_0__.Anime(loadAnime.title, loadAnime.image, loadAnime.info, loadAnime.rating, loadAnime.episodes, loadAnime.status, loadAnime.synopsis, loadAnime.users);\n      // create anime objects\n      // when objects are created, they are added to static all in the anime class\n    }\n\n    console.log(_anime__WEBPACK_IMPORTED_MODULE_0__.Anime.all);\n  } catch (error) {\n    console.log(error);\n  }\n}\n\n//# sourceURL=webpack://nakama-v2/./src/anime/getAnime.js?");
 
 /***/ }),
 

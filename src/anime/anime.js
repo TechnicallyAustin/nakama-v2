@@ -1,4 +1,4 @@
-class Anime {
+export class Anime {
     static all = [];
     constructor(title, image, info, rating, episodes, status, synopsis, users) {
         this.title = title;

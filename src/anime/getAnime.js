@@ -1,3 +1,5 @@
+import { Anime } from "./anime";
+
 // contains fetch request to aqcuire animes
 export async function getAnimes(){
     //const url = "https://kitsu.io/api/edge";
@@ -10,10 +12,12 @@ export async function getAnimes(){
             'Content-Type': 'application/json'
         }
     }
+
     try {
         const response = await fetch(`${url}/anime`, {mode: 'cors'});
         const anime = await response.json();
         // build anime object
+        //const animeList = [];
             for (let i = 0; i < anime.data.length; i++) {
                 //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
                 let loadAnime = {
@@ -26,11 +30,12 @@ export async function getAnimes(){
                     synopsis: anime.data[i].attributes.synopsis,
                     users: anime.data[i].attributes.userCount
                 }
-                console.log(loadAnime);
+                //animeList.push(loadAnime);
+                let newAnime = new Anime(loadAnime.title, loadAnime.image, loadAnime.info, loadAnime.rating, loadAnime.episodes, loadAnime.status, loadAnime.synopsis, loadAnime.users);
                 // create anime objects
                 // when objects are created, they are added to static all in the anime class
-                
             }
+            console.log(Anime.all);
     }   
     catch (error) {
         console.log(error);
