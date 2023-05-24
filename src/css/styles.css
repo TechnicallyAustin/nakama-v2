@@ -67,6 +67,7 @@ html{
 .anime-list{
     width: 100%;
     height: 90%;
+    overflow-x: auto;
 }
 
 
