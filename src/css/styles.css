@@ -70,4 +70,8 @@ html{
     overflow-x: auto;
 }
 
+.card-cover{
+width: 60%;
+height: auto;;
+}
 

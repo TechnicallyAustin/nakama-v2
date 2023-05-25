@@ -11,8 +11,8 @@ export const domBuilder = {
         titleElement.textContent = title;
     },
     image: function(image){
-        const imageElement = this.card.appendChild(document.createElement('img'));
-        imageElement.setAttribute('class', ``);
+        const imageElement = this.card.appendChild(document.createElement('image'));
+        imageElement.setAttribute('class', `w-25 h-100`);
         imageElement.setAttribute('src', image);
         imageElement.setAttribute('alt', ``);
     
@@ -71,8 +71,8 @@ export const animeCard = {
     },
     cover: function(image){
         const cover = this.card.appendChild(document.createElement('img'));
-        cover.setAttribute('class', `card-cover`);
-        cover.setAttribute('src', `${image}`);
+        cover.setAttribute('class', `card-cover img-fluid w-100 h-100`);
+        cover.setAttribute('src', image);
     },
     label: function(title){
         const label = this.card.appendChild(document.createElement('p'));
@@ -86,8 +86,8 @@ export const animeCard = {
     },
     build: function(animeObject){
         this.createCard();
-        this.cover(animeObject.cover);
-        this.label(animeObject.label);
+        this.cover(animeObject.image);
+        this.label(animeObject.title);
         this.rating(animeObject.rating);
         return this.card;
     }

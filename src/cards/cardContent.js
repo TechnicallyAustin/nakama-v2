@@ -12,7 +12,6 @@ export async function cardContent(){
     allAnime.forEach(anime => {
         //let newCard = domBuilder.build(anime)
         let newCard = animeCard.build(anime)
-        console.log(newCard)
         seasonal.appendChild(newCard)
     })
 

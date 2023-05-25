@@ -20,7 +20,7 @@ export async function getAnimes(){
                 //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
                 let loadAnime = {
                     title: anime.data[i].attributes.canonicalTitle,
-                    image: anime.data[i].attributes.coverImage,
+                    image: anime.data[i].attributes.coverImage.tiny,
                     info: anime.data[i].attributes.description,
                     rating: anime.data[i].attributes.averageRating,
                     episodes: anime.data[i].attributes.episodeCount,
@@ -29,7 +29,7 @@ export async function getAnimes(){
                     users: anime.data[i].attributes.userCount
                 }
                 let newAnime = new Anime(loadAnime.title, loadAnime.image, loadAnime.info, loadAnime.rating, loadAnime.episodes, loadAnime.status, loadAnime.synopsis, loadAnime.users);
-                console.log(loadAnime.image.small)
+                console.log(loadAnime.image)
             };
     }   
     catch (error) {
