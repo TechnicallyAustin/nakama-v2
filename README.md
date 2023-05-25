@@ -12,6 +12,7 @@ Data from API fetch request returns an array of object and their attributes
             import Anime, Card and the Specific fetch request for the anime. (Seasonal, Trending, Top, ...)
 
 
+correcting commits
 
 
 
