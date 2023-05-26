@@ -11,13 +11,6 @@ export class Anime {
         this.users = users;
         allAnime.push(this);
     }
-
-    static find(name) {
-        return Anime.all.find(anime => anime.name === name);
-    }
-    static findById(id) {
-        return Anime.all.find(anime => anime.id === id);
-    }
 }
 
 export const allAnime = []

@@ -61,7 +61,7 @@ html{
 }
 
 .display-container{
-    height: 45vh;
+    height: 30vh;
 }
 
 .anime-list{
@@ -71,7 +71,7 @@ html{
 }
 
 .card-cover{
-width: 60%;
-height: auto;;
+    height: auto;
+    width: 100%;
 }
 
