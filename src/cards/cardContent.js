@@ -8,7 +8,7 @@ export async function cardContent(){
     const topRated = document.querySelector('.rated-anime') 
 
     await getAnimes()
-    console.log("all Anime", allAnime, allAnime.length)
+    console.log("all Anime", allAnime.length)
     allAnime.forEach(anime => {
         console.log(anime)
         //let newCard = domBuilder.build(anime)

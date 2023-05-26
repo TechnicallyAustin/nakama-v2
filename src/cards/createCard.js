@@ -66,12 +66,12 @@ export const animeCard = {
     card: null,
     createCard: function(){
         const newCard = document.createElement('div');
-        newCard.setAttribute('class', `anime-card w-25 h-100`);
+        newCard.setAttribute('class', `anime-card w-25 h-100 d-flex justify-content-center align-items-center`);
         this.card = newCard;
     },
     cover: function(image){
         const cover = this.card.appendChild(document.createElement('img'));
-        cover.setAttribute('class', `card-cover img-fluid w-100 h-100`);
+        cover.setAttribute('class', `card-cover  w-75 h-75`);
         cover.setAttribute('src', image);
     },
     label: function(title){

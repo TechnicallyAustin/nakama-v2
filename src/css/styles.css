@@ -1,25 +1,27 @@
-html{
+html {
     margin: 0;
     top: 0;
     left: 0;
 }
 
-.page-content{
+.page-content {
     width: 100%;
-    height: 100vh;;
-    max-height: 100vh;;
+    height: 100vh;
+    ;
+    max-height: 100vh;
+    ;
     display: grid;
     grid-template-rows: 1fr 16fr 1fr;
 }
 
-.page-header{
+.page-header {
     position: sticky;
     top: 0;
     z-index: 5;
 }
 
 
-.main-content{
+.main-content {
     height: auto;
     width: 100%;
     display: grid;
@@ -27,7 +29,7 @@ html{
 
 }
 
-.hero{
+.hero {
     width: 100%;
     min-width: 45%;
     max-width: 100%;
@@ -37,41 +39,40 @@ html{
     background-position: center;
 }
 
-.anime-container{
+.anime-container {
     width: 100%;
     height: 80%;
     overflow-y: scroll;
 }
 
-.search-container{
+.search-container {
     position: absolute;
     top: 20%;
     left: 2%;
 }
 
-.headline-container{
+.headline-container {
     position: absolute;
     top: 10%;
     left: 2%;
 }
 
-.search-input{
-    background-color: rgba(255,255,255,0.5);
+.search-input {
+    background-color: rgba(255, 255, 255, 0.5);
 
 }
 
-.display-container{
-    height: 30vh;
+.display-container {
+    height: 35%;
 }
 
-.anime-list{
+.anime-list {
     width: 100%;
     height: 90%;
     overflow-x: auto;
 }
 
-.card-cover{
-    height: auto;
-    width: 100%;
+.card-cover {
+    height: 50%;
+    width: 85%;
 }
-

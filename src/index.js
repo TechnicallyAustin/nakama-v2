@@ -12,7 +12,9 @@ import { cardContent } from "./cards/cardContent";
 document.addEventListener("DOMContentLoaded", () => {
     createPage()
     createContent()
+    //getAnimes()
     cardContent()
     //getSeasonalAnime()
     //getTrendingAnime()
 });
+2
