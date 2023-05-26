@@ -71,24 +71,31 @@ export const animeCard = {
     },
     cover: function(image){
         const cover = this.card.appendChild(document.createElement('img'));
-        cover.setAttribute('class', `card-cover  w-75 h-75`);
+        cover.setAttribute('class', `card-cover img-fluid`);
         cover.setAttribute('src', image);
     },
-    label: function(title){
-        const label = this.card.appendChild(document.createElement('p'));
-        label.setAttribute('class', ``);
-        label.textContent = title;
-    },
-    rating: function(rating){
-        const ratings = this.card.appendChild(document.createElement('p'));
-        ratings.setAttribute('class', ``);
-        ratings.textContent = rating
-    },
+    overlay: function(){
+        const container = this.card.appendChild(document.createElement('div'));
+        container.setAttribute('class', `card-img-overlay`);
+        const elements = {
+        label: function(title){
+            const label = container.appendChild(document.createElement('p'));
+            label.setAttribute('class', `card-title`);
+            label.textContent = title;
+        },
+        rating: function(rating){
+            const ratings = container.card.appendChild(document.createElement('p'));
+            ratings.setAttribute('class', `card-text`);
+            ratings.textContent = rating
+        }}
+        elements.label(title)
+        elements.rating(rating)
+    }
+    ,
     build: function(animeObject){
         this.createCard();
         this.cover(animeObject.image);
-        this.label(animeObject.title);
-        this.rating(animeObject.rating);
+        this.overlay()
         return this.card;
     }
 
