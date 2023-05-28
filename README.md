@@ -13,7 +13,7 @@ Data from API fetch request returns an array of object and their attributes
 
 
 
-
+Need to work through API data to ensure that there are images.
 
 
 
