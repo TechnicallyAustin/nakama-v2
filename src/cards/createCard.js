@@ -74,7 +74,7 @@ export const animeCard = {
         cover.setAttribute('class', `card-cover img-fluid`);
         cover.setAttribute('src', image);
     },
-    overlay: function(){
+    overlay: function(title, rating){
         const container = this.card.appendChild(document.createElement('div'));
         container.setAttribute('class', `card-img-overlay`);
         const elements = {
@@ -95,7 +95,7 @@ export const animeCard = {
     build: function(animeObject){
         this.createCard();
         this.cover(animeObject.image);
-        this.overlay()
+        this.overlay(animeObject.title, animeObject.rating)
         return this.card;
     }
 
