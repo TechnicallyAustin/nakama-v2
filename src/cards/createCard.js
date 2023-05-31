@@ -69,33 +69,32 @@ export const animeCard = {
         newCard.setAttribute('class', `anime-card w-25 h-100 w-100`);
         this.card = newCard;
     },
+    overlay: function(title, rating){
+        const container = this.card.appendChild(document.createElement('div'));
+        container.setAttribute('class', `card-body w-50 bg-white bg-opacity-25 d-flex justify-content-between align-items-center`);
+        const elements = {
+        label: function(title){
+            const label = container.appendChild(document.createElement('p'));
+            label.setAttribute('class', `card-title w-50`);
+            label.textContent = title;
+        },
+        rating: function(rating){
+            const ratings = container.appendChild(document.createElement('p'));
+            ratings.setAttribute('class', `card-text w-50`);
+            ratings.textContent = rating
+        }}
+        elements.label(title)
+        elements.rating(rating)
+    },
     cover: function(image){
         const cover = this.card.appendChild(document.createElement('img'));
         cover.setAttribute('class', `card-cover bg-black w-100 h-100`);
         cover.setAttribute('src', image);
     },
-    overlay: function(title, rating){
-        const container = this.card.appendChild(document.createElement('div'));
-        container.setAttribute('class', `card-body`);
-        const elements = {
-        label: function(title){
-            const label = container.appendChild(document.createElement('p'));
-            label.setAttribute('class', `card-title`);
-            label.textContent = title;
-        },
-        rating: function(rating){
-            const ratings = container.appendChild(document.createElement('p'));
-            ratings.setAttribute('class', `card-text`);
-            ratings.textContent = rating
-        }}
-        elements.label(title)
-        elements.rating(rating)
-    }
-    ,
-    build: function(animeObject){
+    build: function(obj){
         this.createCard();
-        this.cover(animeObject.image);
-        this.overlay(animeObject.title, animeObject.rating)
+        this.overlay(obj.title, obj.rating)
+        this.cover(obj.image);
         return this.card;
     }
 

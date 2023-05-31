@@ -43,6 +43,7 @@
 }
 
 .anime-list{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
@@ -52,15 +53,19 @@
 }
 
 .card-cover{
-    height: 85%;
-    width: 85%;
+    height: 100%;
+    width: 100%;
     z-index: 5;
 }
 
 .card-body{
     z-index: 6;
-    position: relative;
-    top: 15;
+    position: absolute;
+    width: 75%;
+    height: auto;;
+
+
+
 
 }
 
