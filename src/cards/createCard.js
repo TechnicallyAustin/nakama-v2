@@ -71,16 +71,16 @@ export const animeCard = {
     },
     overlay: function(title, rating){
         const container = this.card.appendChild(document.createElement('div'));
-        container.setAttribute('class', `card-body w-50 bg-white bg-opacity-25 d-flex justify-content-between align-items-center`);
+        container.setAttribute('class', `card-body bg-white bg-opacity-25 d-flex justify-content-between align-items-center`);
         const elements = {
         label: function(title){
             const label = container.appendChild(document.createElement('p'));
-            label.setAttribute('class', `card-title w-50`);
+            label.setAttribute('class', `card-title`);
             label.textContent = title;
         },
         rating: function(rating){
             const ratings = container.appendChild(document.createElement('p'));
-            ratings.setAttribute('class', `card-text w-50`);
+            ratings.setAttribute('class', `card-text`);
             ratings.textContent = rating
         }}
         elements.label(title)
