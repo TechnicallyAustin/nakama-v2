@@ -71,11 +71,11 @@ export const animeCard = {
     },
     overlay: function(title, rating){
         const container = this.card.appendChild(document.createElement('div'));
-        container.setAttribute('class', `card-body bg-dark bg-opacity-75 w-100 d-flex justify-content-center align-items-center`);
+        container.setAttribute('class', `card-body bg-dark bg-opacity-75 d-flex flex-column justify-content-start align-items-center`);
         const elements = {
         label: function(title){
             const label = container.appendChild(document.createElement('p'));
-            label.setAttribute('class', `card-title w-100 `);
+            label.setAttribute('class', `card-title w-50 `);
             label.textContent = title;
         },
         rating: function(rating){

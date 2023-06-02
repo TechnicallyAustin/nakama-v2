@@ -1,27 +1,15 @@
-import { Anime } from "./anime"
-import { loadAnime } from "./loadAnime"
-
-
-export async function getSeasonalAnime(){
-    const url = process.env.URL
-    const headers = {
-        'Accept': 'application/vnd.api+json',
-        'Content-Type': 'application/vnd.api+json'
-    }
-    try{
-        const response = await fetch(`${url}/anime?filter[seasonYear]=2023`, {mode: 'cors'})
-        const anime = await response.json()
-          for (let i = 0; i < anime.data.length; i++) {
-    console.log(anime.data[i]);
+export function loadAnime() {
+  for (let i = 0; i < anime.data.length; i++) {
+    console.log("test");
     //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
-    //if (
-    //  anime.data[i].attributes.canonicalTitle &&
-    //  anime.data[i].coverImage !== null
-    //) {
-      console.log("seasonal",anime.data[i]);
+    if (
+      anime.data[i].attributes.canonicalTitle &&
+      anime.data[i].coverImage !== null
+    ) {
+      console.log(anime.data[i]);
       let loadAnime = {
         title: anime.data[i].attributes.canonicalTitle,
-        image: anime.data[i].attributes.coverImage,
+        image: anime.data[i].attributes.coverImage.original,
         info: anime.data[i].attributes.description,
         rating: anime.data[i].attributes.averageRating,
         episodes: anime.data[i].attributes.episodeCount,
@@ -40,11 +28,7 @@ export async function getSeasonalAnime(){
         loadAnime.synopsis,
         loadAnime.users
       );
-      console.log(newAnime);
     }
- // }
-}
-    catch(error){
-        console.log(error)
-    }
+  }
+  console.log(anime.data.length);
 }

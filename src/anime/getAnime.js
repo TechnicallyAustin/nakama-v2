@@ -17,10 +17,10 @@ export async function getAnimes(){
         const response = await fetch(`${url}/anime?page[limit]=20&page[offset]=0`, {mode: 'cors'});
         const anime = await response.json();
             for (let i = 0; i < anime.data.length; i++) {
-                console.log("test")
+                //console.log("test")
                 //console.log(anime.data[i].attributes.canonicalTitle,anime.data[i]);
                 if (anime.data[i].attributes.canonicalTitle && anime.data[i].coverImage !== null){
-                    console.log(anime.data[i])
+                    //console.log(anime.data[i])
                     let loadAnime = {
                         title: anime.data[i].attributes.canonicalTitle,
                         image: anime.data[i].attributes.coverImage.original,
@@ -36,7 +36,7 @@ export async function getAnimes(){
                     
                 }
             };
-            console.log(anime.data.length);
+
     }   
     catch (error) {
         console.log(error);
