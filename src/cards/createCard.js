@@ -66,16 +66,16 @@ export const animeCard = {
     card: null,
     createCard: function(){
         const newCard = document.createElement('div');
-        newCard.setAttribute('class', `anime-card w-25 h-100 w-100`);
+        newCard.setAttribute('class', `anime-card h-100 w-100`);
         this.card = newCard;
     },
     overlay: function(title, rating){
         const container = this.card.appendChild(document.createElement('div'));
-        container.setAttribute('class', `card-body bg-white bg-opacity-25 d-flex justify-content-between align-items-center`);
+        container.setAttribute('class', `card-body bg-dark bg-opacity-75 w-100 d-flex justify-content-center align-items-center`);
         const elements = {
         label: function(title){
             const label = container.appendChild(document.createElement('p'));
-            label.setAttribute('class', `card-title`);
+            label.setAttribute('class', `card-title w-100 `);
             label.textContent = title;
         },
         rating: function(rating){

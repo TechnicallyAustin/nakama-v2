@@ -49,6 +49,7 @@
     grid-auto-columns: 1fr;
     width: 95%;
     height: auto;
+    overflow-x: auto;
 }
 
 .card-cover{
@@ -61,8 +62,11 @@
     z-index: 6;
     position: absolute;
     color: white;
-    height: 25%;
-    overflow: hidden;
+    height: 40%;
+}
+
+.card-titles{
+
 }
 
 
