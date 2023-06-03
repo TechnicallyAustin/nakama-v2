@@ -57,7 +57,7 @@
     position: relative;
     display: flex;
     width: 95vw;
-    min-height: 25vh;
+    min-height: 25h;
     max-height: 35vh;
     height: 25vh;
     overflow-x: auto !important;
@@ -65,8 +65,8 @@
 }
 
 .anime-card{
-    width: 33%;
-    min-width: 33%;
+    width: 35%;
+    min-width: 35%;
     height: 25vh;
     max-height: 35vh;
     object-fit: contain;
