@@ -1,5 +1,7 @@
-import { allAnime } from "../anime/anime";
+import { allAnime, seasonalAnime, trendingAnime } from "../anime/anime";
+
 import { getAnimes } from "../anime/getAnime";
+import { getSeasonalAnime } from "../anime/getSeasonalAnime";
 import { getTrendingAnime } from "../anime/getTrendingAnime";
 import { animeCard } from "./createCard";
 
@@ -10,9 +12,9 @@ export async function cardContent(){
 
     const load = {
         season: async function(){
-            await getAnimes()
+            await getSeasonalAnime()
             //console.log("all Anime", allAnime.length)
-            allAnime.forEach(anime => {
+            seasonalAnime.forEach(anime => {
                 let newCard = animeCard.build(anime)
                 seasonal.appendChild(newCard)
             })
@@ -20,7 +22,7 @@ export async function cardContent(){
         trending: async function(){
             await getTrendingAnime();
             //console.log("all Anime", allAnime.length)
-            allAnime.forEach((anime) => {
+            trendingAnime.forEach((anime) => {
               let newCard = animeCard.build(anime);
               trending.appendChild(newCard);
             });

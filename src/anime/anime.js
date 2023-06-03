@@ -14,3 +14,6 @@ export class Anime {
 }
 
 export const allAnime = []
+export const topAnime = []
+export const trendingAnime = []
+export const seasonalAnime = []

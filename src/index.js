@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createContent()
     //getAnimes()
     cardContent()
-    getSeasonalAnime()
+    //getSeasonalAnime()
     //getTrendingAnime()
 });
 2

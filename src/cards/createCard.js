@@ -66,16 +66,16 @@ export const animeCard = {
     card: null,
     createCard: function(){
         const newCard = document.createElement('div');
-        newCard.setAttribute('class', `anime-card h-100 w-100`);
+        newCard.setAttribute('class', `anime-card card`);
         this.card = newCard;
     },
     overlay: function(title, rating){
         const container = this.card.appendChild(document.createElement('div'));
-        container.setAttribute('class', `card-body bg-dark bg-opacity-75 d-flex flex-column justify-content-start align-items-center`);
+        container.setAttribute('class', `card-body bg-dark bg-opacity-75 d-flex justify-content-center align-items-center`);
         const elements = {
         label: function(title){
             const label = container.appendChild(document.createElement('p'));
-            label.setAttribute('class', `card-title w-50 `);
+            label.setAttribute('class', `card-title w-50 mb-0`);
             label.textContent = title;
         },
         rating: function(rating){
@@ -88,7 +88,7 @@ export const animeCard = {
     },
     cover: function(image){
         const cover = this.card.appendChild(document.createElement('img'));
-        cover.setAttribute('class', `card-cover bg-black w-100 h-100`);
+        cover.setAttribute('class', `card-cover bg-black`);
         cover.setAttribute('src', image);
     },
     build: function(obj){
