@@ -7,7 +7,7 @@ export function mainContent(){
         },
         animeContainer: function (){
             const animeContainer = main.appendChild(document.createElement("div"))
-            animeContainer.setAttribute("class", "anime-container bg-light d-flex flex-column justify-content-center align-items-start")
+            animeContainer.setAttribute("class", "anime-container bg-black d-flex flex-column justify-content-center align-items-center")
         }
     }
     element.hero()

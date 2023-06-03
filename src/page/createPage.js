@@ -7,11 +7,11 @@ export function createPage(){
         },
         main: function(){
             const main = pageContent.appendChild(document.createElement('main'));
-            main.setAttribute('class', 'page-main w-100 h-100 bg-light');
+            main.setAttribute('class', 'page-main w-100 h-100 bg-black');
         },
         footer: function(){
             const footer = pageContent.appendChild(document.createElement('footer'));
-            footer.setAttribute('class', 'page-footer w-100 h-100 bg-warning');
+            footer.setAttribute('class', 'page-footer w-100 h-100 bg-black');
         }
     };
     page.header();
