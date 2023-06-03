@@ -1,13 +1,13 @@
-import { Anime, trendingAnime } from "./anime";
+import { Anime, topAnime } from "./anime";
 
-export async function getTrendingAnime() {
+export async function getTopAnime() {
   const url = process.env.URL;
   const response = await fetch(
-    `${url}/trending/anime?page[limit]=20&page[offset]=0`,
+    `${url}/anime?page[limit]=20&page[offset]=0&sort=-averageRating`,
     { mode: "cors" }
   );
   const anime = await response.json();
-
+  console.log('top',anime);
   for (let i = 0; i < anime.data.length; i++) {
     console.log(anime.data[i]);
     if (
@@ -36,7 +36,7 @@ export async function getTrendingAnime() {
         loadAnime.synopsis,
         loadAnime.users
       );
-      trendingAnime.push(newAnime)
+      topAnime.push(newAnime);
     }
   }
 }

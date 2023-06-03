@@ -1,7 +1,8 @@
-import { allAnime, seasonalAnime, trendingAnime } from "../anime/anime";
+import { allAnime, seasonalAnime, topAnime, trendingAnime } from "../anime/anime";
 
 import { getAnimes } from "../anime/getAnime";
 import { getSeasonalAnime } from "../anime/getSeasonalAnime";
+import { getTopAnime } from "../anime/getTopAnime";
 import { getTrendingAnime } from "../anime/getTrendingAnime";
 import { animeCard } from "./createCard";
 
@@ -27,8 +28,15 @@ export async function cardContent(){
               trending.appendChild(newCard);
             });
         },
-        topRated: function(){}
+        topRated: async function(){
+            await getTopAnime()
+            topAnime.forEach(anime => {
+                let newCard = animeCard.build(anime)
+                topRated.appendChild(newCard)
+            });
+        }
     }
     load.season()
     load.trending()
+    load.topRated()
 }

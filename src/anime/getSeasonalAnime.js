@@ -9,7 +9,7 @@ export async function getSeasonalAnime() {
   };
   try {
     const response = await fetch(
-      `${url}/anime?filter[season]=summer`,
+      `${url}/anime?page[limit]=20&page[offset]=0?filter[season]=summer`,
       { mode: "cors" }
     );
     const anime = await response.json();
@@ -18,7 +18,7 @@ export async function getSeasonalAnime() {
       if (anime.data[i].attributes.canonicalTitle && anime.data[i].coverImage !== null) {
         let loadAnime = {
             title: anime.data[i].attributes.canonicalTitle,
-            image: anime.data[i].attributes.coverImage,
+            image: anime.data[i].attributes.coverImage.tiny,
             info: anime.data[i].attributes.description,
             rating: anime.data[i].attributes.averageRating,
             episodes: anime.data[i].attributes.episodeCount,
