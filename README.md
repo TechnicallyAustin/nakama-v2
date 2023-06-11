@@ -17,3 +17,5 @@ Need to work through API data to ensure that there are images.
 
 working through applying a more optimal api`
 
+
+slight changes
